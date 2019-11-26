@@ -1,0 +1,25 @@
+server:
+  port: 8300
+
+spring:
+  datasource:
+    name: justgo_v_0_1
+    url: jdbc:mysql://120.78.93.197:3306/justgo?useUnicode=true&characterEncoding=UTF-8
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: abc123
+    driver-class-name: com.mysql.jdbc.Driver
+
+  redis:
+    host: 120.78.93.197
+    port: 6379
+    database: 1
+    timeout: 100
+    jedis:
+      pool:
+        max-active: 10
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
