@@ -1,14 +1,14 @@
 #/bin/bash
 
 Image_Name="justgo"
-ContainerName="justGo"
+ContainerName="justgo"
 
 Image_ID = `sudo docker images|grep -i ${Image_Name}|awk '{print $3}'`
-echo "镜像ID = "$Image_ID 
+echo "镜像ID" = "$Image_ID" 
 Contain_ID=`sudo docker ps -a |grep -i ${ContainerName}|awk '{print $1}'`
 echo "容器ID = "$Contain_ID"
 
-if test -z "$Image_ID":
+if test -z "$Image_ID"
 then 
     echo "镜像不存在"
 else 
@@ -18,7 +18,7 @@ else
          echo "容器将要被执行stop命令"
          sudo docker stop $ContainerName
          echo "容器处于stop状态"
-    if
+    fi
      echo "旧镜像将要被删除"
      sudo docker rmi -f $Image_Name
      echo "成功删除旧镜像" 
@@ -37,4 +37,4 @@ else
     echo "旧容器已被删除"
 
 echo "创建新容器"
-sudo  docker run -d -p 8300:8300 $ContainerName $Image_Name
+sudo  docker run -d -p 8300:8300 --name $ContainerName $Image_Name
