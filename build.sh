@@ -16,11 +16,11 @@ else
         then echo "容器不存在"
     else
          echo "容器将要被执行stop命令"
-         sudo docker stop $ContainerName
+         sudo docker stop $Contain_ID
          echo "容器处于stop状态"
     fi
      echo "旧镜像将要被删除"
-     sudo docker rmi -f $Image_Name
+     sudo docker rmi -f $Image_ID
      echo "成功删除旧镜像" 
 fi
 echo "镜像构建中:------->"
@@ -33,8 +33,8 @@ if test -z "$Contain_ID"
     then 
         echo "容器不存在"
 else 
-    sudo docker rm -f ${ContainerName}
+    sudo docker rm -f $Contain_ID
     echo "旧容器已被删除"
 
 echo "创建新容器"
-sudo  docker run -d -p 8300:8300 --name $ContainerName $Image_Name
+sudo  docker run -d -p 8300:8300 --name $ContainerName  $Image_Name
