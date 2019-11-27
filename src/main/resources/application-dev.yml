@@ -7,7 +7,7 @@ spring:
     url: jdbc:mysql://120.78.93.197:3306/justgo?useUnicode=true&characterEncoding=UTF-8
     type: com.alibaba.druid.pool.DruidDataSource
     username: root
-    password: abc123
+    password: yyfeng.314
     driver-class-name: com.mysql.jdbc.Driver
 
   redis:
