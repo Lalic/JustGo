@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 Image_Name="justgo"
 ContainerName="justgo"
