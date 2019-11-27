@@ -3,7 +3,7 @@
 Image_Name="justgo"
 ContainerName="justgo"
 
-Image_ID = `sudo docker images|grep -i ${Image_Name}|awk '{print $3}'`
+Image_ID=`sudo docker images|grep -i ${Image_Name}|awk '{print $3}'`
 echo "镜像ID" = "$Image_ID" 
 Contain_ID=`sudo docker ps -a |grep -i ${ContainerName}|awk '{print $1}'`
 echo "容器ID = "$Contain_ID"
