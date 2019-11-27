@@ -35,6 +35,6 @@ if test -z "$Contain_ID"
 else 
     sudo docker rm -f $Contain_ID
     echo "旧容器已被删除"
-
+fi
 echo "创建新容器"
 sudo  docker run -d -p 8300:8300 --name $ContainerName  $Image_Name
